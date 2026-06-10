@@ -58,3 +58,25 @@ After sorting -> ['a', 'compare', 'i', 'to'].
 =================================================
 
 """
+path_1 = "file_reading_practice/sonnet_words.txt"
+path_2 = "file_reading_practice/sowpods.txt"
+list = set()
+count = 0
+
+with open(path_1, "r") as file:
+   for word in file:
+      if word[-1] == '\n':
+         word = word[:-1]
+
+      list.add(word)
+
+with open(path_2, "r") as file:
+   for word in file:
+      if word[-1] == '\n':
+         word = word[:-1]
+
+      if word not in list:
+         print(word)
+         count += 1
+
+print(f"Total Words: {count}")         
