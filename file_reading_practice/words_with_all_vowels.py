@@ -45,10 +45,7 @@ count = 0
 
 with open("sowpods.txt", "r") as file:
     for word in file:
-        if word[-1] == '\n':
-            word = word[:-1]
-
-        word = word.lower()    
+        word = word.strip().lower()    
         if vowels.issubset(set(word)):
             print(word)
             count += 1

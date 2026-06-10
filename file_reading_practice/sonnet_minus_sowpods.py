@@ -70,8 +70,7 @@ with open("sonnet_words.txt", "r") as file:
 
 with open("sowpods.txt", "r") as file:
    for word in file:
-      if word[-1] == '\n':
-         word = word[:-1]
+      word = word.strip().lower()
 
       if word not in list:
          print(word)
