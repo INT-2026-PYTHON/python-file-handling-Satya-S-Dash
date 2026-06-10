@@ -53,3 +53,20 @@ Sorted -> ['b', 'd', 'e', 'h', 'k', 'm', 'n',
 =================================================
 
 """
+all_letters = set()
+repeat = set()
+
+with open("file_reading_practice/sonnet_words.txt", "r") as file:
+   for i in file:
+      i = i.lower()
+
+      for ch in i:
+         if ch.isalpha():
+            all_letters.add(ch)
+
+      for j in range(len(i) - 1):
+         if i[j] == i[j + 1]:
+            repeat.add(i[j])
+
+result = sorted(all_letters - repeat)
+print(result)                  

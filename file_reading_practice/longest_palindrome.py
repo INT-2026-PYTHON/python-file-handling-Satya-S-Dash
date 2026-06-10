@@ -42,3 +42,19 @@ The longest is "malayalam" with 9 characters.
 =================================================
 
 """
+list = []
+count = 0
+
+with open("file_reading_practice/sowpods.txt", "r") as file:
+   for word in file:
+      word = word.strip().lower()
+
+      if word == word[::-1]:
+         if len(word) > count:
+            count = len(word)
+            list = [word]
+
+         elif len(word) == count:
+            list.append(word)
+
+print(list)               

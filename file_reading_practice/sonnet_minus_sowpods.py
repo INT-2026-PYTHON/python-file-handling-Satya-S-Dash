@@ -58,3 +58,20 @@ After sorting -> ['a', 'compare', 'i', 'to'].
 =================================================
 
 """
+list = set()
+count = 0
+
+with open("file_reading_practice/sonnet_words.txt", "r") as file:
+   for word in file:
+      word.strip().lower()
+      list.add(word)
+
+with open("file_reading_practice/sowpods.txt", "r") as file:
+   for word in file:
+      word = word.strip().lower()
+
+      if word not in list:
+         print(word)
+         count += 1
+
+print(f"Total Words: {count}")         
