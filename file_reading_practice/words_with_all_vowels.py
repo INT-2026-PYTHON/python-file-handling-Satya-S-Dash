@@ -43,7 +43,7 @@ Explanation:
 vowels = {'a', 'e', 'i', 'o', 'u'}
 count = 0
 
-with open("sowpods.txt", "r") as file:
+with open("file_reading_practice/sowpods.txt", "r") as file:
     for word in file:
         word = word.strip().lower()    
         if vowels.issubset(set(word)):

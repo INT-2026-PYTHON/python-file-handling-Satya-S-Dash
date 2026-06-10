@@ -56,7 +56,7 @@ Sorted -> ['b', 'd', 'e', 'h', 'k', 'm', 'n',
 all_letters = set()
 repeat = set()
 
-with open("sonnet_words.txt", "r") as file:
+with open("file_reading_practice/sonnet_words.txt", "r") as file:
    for i in file:
       i = i.lower()
 
