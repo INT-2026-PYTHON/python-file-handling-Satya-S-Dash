@@ -54,10 +54,9 @@ Explanation:
 def is_palindrome(word):
     return word == word[::-1]
 
-path = "file_reading_practice/sowpods.txt"
 count = 0
 
-with open(path, "r") as file:
+with open("sowpods.txt", "r") as file:
     for word in file:
         if word[-1] == '\n':
             word = word[:-1]

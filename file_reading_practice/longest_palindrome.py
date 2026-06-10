@@ -44,9 +44,8 @@ The longest is "malayalam" with 9 characters.
 """
 list = []
 count = 0
-path = "file_reading_practice/sowpods.txt"
 
-with open(path, "r") as file:
+with open("sowpods.txt", "r") as file:
    for word in file:
       if word[-1] == '\n':
          word = word[:-1]
